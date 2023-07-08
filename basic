@@ -1,0 +1,65 @@
+1. Write a Python Program to find sum of array?
+def find_sum(arr):
+    sum = 0
+    for num in arr:
+        sum += num
+    return sum
+
+array = [1, 2, 3, 4, 5]
+result = find_sum(array)
+print("Sum of the array:", result)
+
+2. Write a Python Program to find largest element in an array?
+def find_largest(arr):
+    largest = arr[0]
+    for num in arr:
+        if num > largest:
+            largest = num
+    return largest
+
+array = [10, 5, 20, 15, 30]
+result = find_largest(array)
+print("Largest element in the array:", result)
+
+
+3. Write a Python Program for array rotation?
+def rotate_array(arr, k):
+    rotated = arr[k:] + arr[:k]
+    return rotated
+
+array = [1, 2, 9, 4, 5]
+k = 1
+result = rotate_array(array, k)
+print("Array after rotation:", result)
+
+
+4. Write a Python Program to Split the array and add the first part to the end?
+def split_and_add(arr, k):
+    split = arr[:k]
+    remaining = arr[k:]
+    combined = remaining + split
+    return combined
+
+array = [1, 2, 3, 4, 5]
+k = 2
+result = split_and_add(array, k)
+print("Array after splitting and adding:", result)
+
+
+
+5. Write a Python Program to check if given array is Monotonic?
+def is_monotonic(arr):
+    increasing = decreasing = True
+    for i in range(len(arr) - 1):
+        if arr[i] > arr[i + 1]:
+            increasing = False
+        if arr[i] < arr[i + 1]:
+            decreasing = False
+    return increasing or decreasing
+
+array = [1, 2, 3, 4, 5]
+result = is_monotonic(array)
+if result:
+    print("The array is monotonic.")
+else:
+    print("The array is not monotonic.")
